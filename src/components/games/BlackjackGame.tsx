@@ -74,9 +74,9 @@ const getSuitColor = (suit: string) => {
 
 const PlayingCard = ({ card, hidden = false, delay = 0 }: { card: Card; hidden?: boolean; delay?: number }) => (
   <motion.div
-    initial={{ opacity: 0, rotateY: 180, x: 50 }}
-    animate={{ opacity: 1, rotateY: 0, x: 0 }}
-    transition={{ duration: 0.4, delay }}
+    initial={{ x: 20, scale: 0.9 }}
+    animate={{ x: 0, scale: 1 }}
+    transition={{ duration: 0.3, delay }}
     className={`relative h-28 w-20 rounded-lg border-2 ${
       hidden ? 'bg-primary border-primary' : 'bg-white border-border'
     } card-shadow flex items-center justify-center`}
